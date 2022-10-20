@@ -25,18 +25,14 @@ else{
     Console.WriteLine("What a shame");
     
 }
-Console.WriteLine("Did you have any homework");
-string Ishomework = (Console.ReadLine()!);
 
-if (Ishomework == "yes"){
-    Console.WriteLine("How many points did you get on your homework");
-    int homework = int.Parse(Console.ReadLine()!);
+
+
+Console.WriteLine("How many points did you get on your homework");
+   int homework = int.Parse(Console.ReadLine()!);
     possiblepoints += 20;
     totalpoints += homework;
-}
-else {
-    Console.WriteLine("What a shame");
-}
+
 Console.WriteLine("Did you take a oral exams");
 string oral = Console.ReadLine()!;
 if (oral == "yes"){
@@ -47,11 +43,12 @@ if (oral == "yes"){
 }
 else {
     Console.WriteLine("What a shame");
+
 }
 
 
+double grade = totalpoints/possiblepoints *100;
 
-double grade = totalpoints/possiblepoints * 100;
 Console.WriteLine(grade);
 if ( grade > 89){
     Console.WriteLine("You grade is 1");
@@ -68,4 +65,11 @@ else if (grade >= 50){
 }
 else if (grade <= 49){
     Console.WriteLine("Sry you didn´t pass");
+}
+double homeworkall = (totalpoints - homework + 20)/possiblepoints *100;
+if (grade != homeworkall){
+    Console.WriteLine("You could have gotten a better greade when you got full points on your homework");
+}
+else{
+    Console.WriteLine("It doesn´t make a diffrenz");
 }
